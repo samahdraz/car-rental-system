@@ -1,0 +1,153 @@
+:root {
+   --primaryBackgroundColor: #333;
+   --primaryTextColor: white;
+}
+
+.h-container {
+   background-color: var(--primaryBackgroundColor) !important;
+   position: fixed;
+   z-index: 1;
+}
+
+.header {
+   position: fixed;
+   top: 0;
+}
+
+.container-fluid.w-100.bg-dark {
+   position: fixed;
+   top: 70px;
+   z-index: 1;
+}
+
+/* header{
+} */
+header h1 i {
+   /* position: fixed; */
+   color: green;
+}
+
+.dropdown-item:hover {
+   background-color: var(--primaryBackgroundColor) !important;
+}
+
+.dropdown.insideDropDown:hover .dropdown-menu {
+   display: block;
+   margin-top: 0;
+   /* remove the gap so it doesn't close*/
+}
+
+#footer {
+   position: fixed;
+   bottom: 0 !important;
+   /* padding-top: 200px; */
+   margin-top: 100px;
+   /* right: 0; */
+   /* top: 1000px; */
+}
+
+main p {
+   margin-bottom: 100px;
+}
+
+.imgs {
+   margin: 120px 0;
+   /* padding-top: 100px; */
+}
+
+.hisham {
+   padding: 50px 10px 95px 10px;
+   /* margin-top: 50px; */
+}
+
+.required {
+   border-color: tomato;
+   box-shadow: 0 0 20px tomato;
+}
+
+#passwordFady,
+#nameFady {
+   display: block !important;
+   color: red;
+   font-size: large;
+   margin: 15px 0;
+}
+
+.hisham label:not(#nameFady, #passwordFady) {
+   font-weight: bold;
+}
+
+main>.imgs>.img img:hover {
+   transform: scale(0.9);
+   border-radius: 15px;
+   cursor: pointer;
+   transition: all ease 0.3s;
+}
+
+
+main.container .nav {
+   margin-top: 150px;
+}
+main.container .table-responsive{
+   margin: 80px 0;
+
+}
+
+.card img {
+   margin: auto !important;
+}
+
+main>.imgs>.img img,
+.card img {
+   width: 300px;
+   height: 300px;
+   margin: 15px 10px;
+}
+main>.imgs>.img label{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+main>.imgs {
+   display: flex;
+   justify-content: flex-start;
+   /* align-items: flex-start; */
+   flex-wrap: wrap;
+   /* margin: 0 25px; */
+}
+
+.card {
+   /* padding-top: 150px; */
+   margin: 120px 0;
+
+}
+
+.card img {
+   padding-top: 25px;
+}
+
+.card-body h4 {
+   text-align: center;
+}
+
+.card>.card-body>.card-text>section>h3>span {
+   font-size: 1.1rem;
+   font-weight: 300;
+}
+
+table thead tr th:first-child {
+   width: 50px !important;
+}
+
+#home {
+   /* margin: auto; */
+}
+select{
+   border-color: transparent;
+   border-radius: 10px;
+}
+#city input{
+   border: solid 1px #ddd;
+   border-radius: 10px  ;
+}

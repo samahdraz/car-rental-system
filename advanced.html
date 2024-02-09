@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles1.css" />
+    <script
+      src="https://kit.fontawesome.com/1056a9816d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Advanced Search</title>
+  </head>
+  <style>
+    .centered-button2 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: rgb(248, 3, 203);
+      border-color: transparent;
+    }
+  </style>
+  <body>
+    <div
+      class="container-fluid header p-2 text-bg-secondary d-flex justify-content-center align-items-center h-container"
+    >
+      <header>
+        <h1><i class="fa-solid fa-leaf"></i>Car Rental System</h1>
+      </header>
+    </div>
+    <div
+      class="card text-start d-flex justify-content-center align-items-center"
+    >
+      <div class="card-body w-50">
+        <h4 class="card-title">Advanced Search</h4>
+        <form id="myForm" action="advanced.php" method="post">
+        <div class="container">
+          <div class="hisham">
+            <div class="row">
+                <div class="col">
+                    <input required type="radio" name="type" id="Car" value="Car" class="form-check-input" aria-describedby="helpId" >
+                    <label for="type" class="form-check-label">Car</label>
+                </div>
+                <div class="col">
+                    <input type="radio" name="type" id="Customer" value="Customer" class="form-check-input" aria-describedby="helpId" >
+                    <label for="type" class="form-check-label">Customer</label>
+                </div>
+                <div class="col">
+                    <input type="radio" name="type" id="Reservation" value="Reservation" class="form-check-input" aria-describedby="helpId" >
+                    <label for="type" class="form-check-label">Reservation</label>
+                </div>
+             </div>
+            <label for="" id="nameFady"></label>
+            <label for='update'>Modification</label><br>
+            <label for="" id="nameFady"></label>
+		<select id="modification" name="modification" class="Modification mb-3 p-2">
+
+            <label for="name" class="form-label">Value</label>
+            <input required type="text" name="value" id="value" class="form-control w-100 p-2" placeholder="value"
+                        aria-describedby="helpId" >
+        <label for="" id="nameFady"></label>
+        <div class="d-flex justify-content-around   align-items-center w-100 my-5">
+            <input name="submit" id="submit" class="btn btn-dark w-30 py-2 my-3 " type="submit"
+                value="Advanced Search">
+           
+        </div>
+
+            </div>
+           </div>
+        </div>
+       
+        </div>
+      </div>
+    </form>
+    </div>
+    <div
+      id="footer"
+      class="container-fluid p-2 text-bg-secondary d-flex justify-content-center align-items-center h-container"
+    >
+      
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the radio buttons and the modification select element
+            var car = document.getElementById("Car");
+            var customer = document.getElementById("Customer");
+            var reservation = document.getElementById("Reservation");
+    
+            // Add event listeners to the radio buttons
+            car.addEventListener("change", function () {
+                updateModificationOptions([ "plate_id","price" ,"country" ,"model","type ","color" ,"detail " , "office_id"]);
+            });
+    
+            customer.addEventListener("change", function () {
+                updateModificationOptions([	"ssn","name","email" ,"age" ,"sex" ,"country" ,"visa_number" ,"password"]);
+            });
+    
+            reservation.addEventListener("change", function () {
+                updateModificationOptions(["reservation_date"]);
+            });
+    
+            // Function to update the options of the modification dropdown
+            function updateModificationOptions(options) {
+                // Clear existing options
+                var selection= document.getElementById("modification");
+                selection.innerHTML = "";
+                // Add new options
+                options.forEach(function (optionText) {
+                    var option = document.createElement("option");
+
+                    option.value = optionText.toLowerCase().replace(" ", "_");
+                    option.text = optionText;
+                    selection.add(option);
+                });
+            }
+        });
+    </script>
+  </body>
+</html>
